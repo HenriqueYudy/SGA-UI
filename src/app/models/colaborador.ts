@@ -10,4 +10,5 @@ export class Colaborador {
     empresa_id: Empresa = new Empresa();
     contato: string;
     cargo_id: Cargo = new Cargo();
+    desligado: boolean;
 }

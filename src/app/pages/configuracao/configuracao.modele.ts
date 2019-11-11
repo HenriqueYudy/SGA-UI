@@ -1,8 +1,8 @@
+import { TicketStatusService } from './../../services/ticketStatus.service';
 import { NgxMaskModule } from 'ngx-mask';
 import { SituacaoService } from './../../services/situacao.service';
 import { ChipService } from './../../services/gerenciarChip.service';
 import { EmpresaService } from './../../services/empresa.service';
-import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -21,6 +21,9 @@ import { GerenciarMobileEmailComponent } from './gerenciar-mobile-email/gerencia
 import { MobileEmailService } from 'src/app/services/mobileEmail.service';
 import { GerenciarChipComponent } from './gerenciar-chip/gerenciar-chip.component';
 import { GerenciarSituacaoComponent } from './gerenciar-situacao/gerenciar-situacao.component';
+import { GerenciarTicketStatusComponent } from './gerenciar-ticket-status/gerenciar-ticket-status.component';
+import { ColorPickerModule } from 'ngx-color-picker';
+
 
 @NgModule({
     imports: [
@@ -39,7 +42,8 @@ import { GerenciarSituacaoComponent } from './gerenciar-situacao/gerenciar-situa
         MatSortModule,
         MatFormFieldModule,
         MatInputModule,
-        NgxMaskModule
+        NgxMaskModule,
+        ColorPickerModule
 
 
 
@@ -52,7 +56,8 @@ import { GerenciarSituacaoComponent } from './gerenciar-situacao/gerenciar-situa
         GerenciarSetorComponent,
         GerenciarMobileEmailComponent,
         GerenciarChipComponent,
-        GerenciarSituacaoComponent
+        GerenciarSituacaoComponent,
+        GerenciarTicketStatusComponent
     ],
 
     providers : [
@@ -61,7 +66,8 @@ import { GerenciarSituacaoComponent } from './gerenciar-situacao/gerenciar-situa
         SetorService,
         MobileEmailService,
         ChipService,
-        SituacaoService
+        SituacaoService,
+        TicketStatusService
     ]
 })
 

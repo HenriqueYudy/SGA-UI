@@ -6,6 +6,7 @@ import { GerenciarSetorComponent } from "./gerenciar-setor/gerenciar-setor.compo
 import { GerenciarMobileEmailComponent } from "./gerenciar-mobile-email/gerenciar-mobile-email.component";
 import { GerenciarChipComponent } from "./gerenciar-chip/gerenciar-chip.component";
 import { GerenciarSituacaoComponent } from "./gerenciar-situacao/gerenciar-situacao.component";
+import { GerenciarTicketStatusComponent } from "./gerenciar-ticket-status/gerenciar-ticket-status.component";
 
 export const ConfiguracaoRoutes: Routes = [
   { path: "configuracao", component: ConfiguracaoComponent },
@@ -14,5 +15,8 @@ export const ConfiguracaoRoutes: Routes = [
   { path: "gerenciar-setor", component: GerenciarSetorComponent },
   { path: "gerenciar-mobile-email", component: GerenciarMobileEmailComponent },
   { path: "gerenciar-chip", component: GerenciarChipComponent },
-  { path: "gerenciar-situacao", component: GerenciarSituacaoComponent }
+  { path: "gerenciar-situacao", component: GerenciarSituacaoComponent },
+  { path: "gerenciar-situacao", component: GerenciarSituacaoComponent },
+  { path: "gerenciar-ticket-status", component: GerenciarTicketStatusComponent }
+
 ];

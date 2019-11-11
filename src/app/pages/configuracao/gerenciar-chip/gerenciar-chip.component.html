@@ -49,7 +49,7 @@
 
       <ng-container matColumnDef="situacao">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Situação: </th>
-          <td mat-cell *matCellDef="let element">{{element.situation_id.descricao}}</td>
+          <td mat-cell *matCellDef="let element">{{element.situation.descricao}}</td>
         </ng-container>
   
 
@@ -125,7 +125,6 @@
                   <div class="form-group col-12">
                     <label for="Situacao">Situação: </label>
                     <select class="form-control" formControlName="situation_id" [(ngModel)]="chip.situation_id">
-                      <option selected>Selecione uma situação</option>
                       <option *ngFor="let situacao of situacoes" value="{{situacao.id}}">{{situacao.descricao}}</option>
                     </select>
                   </div>

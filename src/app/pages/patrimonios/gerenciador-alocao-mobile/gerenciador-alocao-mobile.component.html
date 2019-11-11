@@ -1,0 +1,111 @@
+<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--7">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card" id="main-card">
+
+        <div class="row">
+          <div class="col-6">
+            <form [formGroup]="colabCelularForm">
+              <label for="colaboradorSelec">Colaborador selecionado : </label>
+              <select formControlName="colaborador_id" [(ngModel)]="colabCelular.colaborador_id" id="colaboradorSelec" class="form-control" >
+                <option *ngFor="let colaborador of colaboradores" value="{{colaborador.id}}">{{colaborador.nome}}</option>
+              </select>
+            </form>
+          </div>
+
+          <div class="col-3">
+            <br />
+            <button id="acaoButtons" type="btn" title="Alocação" class="btn btn-primary"><i
+                class="fas fa-upload"></i></button>
+            <button type="btn" title="Devolução" class="btn btn-warning"><i class="fas fa-download"></i></button>
+          </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <label>Filtrar por cidade: </label>
+          <div class="filtroPorEmpresa">
+            <div (click)="filterByCity(empresa)" *ngFor="let empresa of empresas" class="tagEmpresa">
+              {{empresa.nome_fantasia}}
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="row">
+          <label>Filtro: </label>
+          <input type="text" (keyup)="filterTable($event.target.value)" class="form-control" placeholder="Filtro..." />
+        </div>
+
+        <div class="row">
+
+          <table id="colaboradoresTable" class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Colaborador</th>
+                <th scope="col">Email</th>
+                <th scope="col">Setor</th>
+                <th scope="col">Cargo</th>
+                <th scope="col">Contato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr (click)="getColaborador(colaborador)" (click)="setClickedRow(i)" data-toggle="modal" data-target="#newModeloModal" [class.active]="i == selectedRow" id="contentTr" *ngFor="let colaborador of colaboradores; let i = index">
+                <td>{{colaborador.nome}}</td>
+                <td>{{colaborador.email.endereco}}</td>
+                <td>{{colaborador.setor.nome}}</td>
+                <td>{{colaborador.cargo.nome}}</td>
+                <td>{{colaborador.contato}}</td>
+              
+              </tr>
+
+
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+
+</div> 
+
+<div class="modal fade" id="newModeloModal" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
+aria-hidden="true">
+<div class="modal-dialog modal-info modal-dialog-centered modal-" role="document">
+  <div class="modal-content bg-gradient-secondary">
+
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title-notification">Gerenciar Celulares</h3>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+
+
+
+     
+
+    </div>
+
+  </div>
+</div>
+</div>

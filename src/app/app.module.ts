@@ -13,7 +13,6 @@ import { JwtInterceptor } from "./helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./helpers/error.interceptor";
 import { Globals } from "./global-variable";
 import { ToastrModule } from "ng6-toastr-notifications";
-import { GerenciarMobileEmailComponent } from "./pages/configuracao/gerenciar-mobile-email/gerenciar-mobile-email.component";
 import { NgxMaskModule, IConfig } from "ngx-mask";
 export var options: Partial<IConfig> | (() => Partial<IConfig>);
 
@@ -31,7 +30,7 @@ export var options: Partial<IConfig> | (() => Partial<IConfig>);
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot(options)
   ],
-  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent],
+  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
