@@ -1,3 +1,4 @@
+import { Empresa } from './../models/empresa';
 import { Colaborador } from 'src/app/models/colaborador';
 import { Observable } from 'rxjs';
 import { Globals } from "./../global-variable";
@@ -12,6 +13,10 @@ export class ColaboradorService {
 
   index(): Observable<Colaborador[]> {
       return this.http.get<Colaborador[]>(this.URI);
+  }
+
+  indexByCity(empresa: Empresa): Observable <Colaborador[]>{
+    return this.http.get<Colaborador[]>(this.URI + `/find/city/${empresa.id}`);
   }
 
   show(colaborador: Colaborador): Observable<Colaborador> {

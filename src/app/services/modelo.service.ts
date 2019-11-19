@@ -20,6 +20,10 @@ export class ModeloService {
         return this.http.get<Modelo[]>(this.URI + `/findByMarca/${id}`);
     }
 
+    indexOnlyEquipaments(): Observable<Modelo[]>{
+        return this.http.get<Modelo[]>(this.URI + `/find/only-equipaments`);
+    }
+
     show(modelo: Modelo):Observable<Modelo>{
         return this.http.get<Modelo>(this.URI + `/${modelo.id}`);
     }

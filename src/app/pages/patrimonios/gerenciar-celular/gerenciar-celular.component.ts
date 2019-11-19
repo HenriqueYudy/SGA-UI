@@ -66,7 +66,7 @@ export class GerenciarCelularComponent implements OnInit {
       estragado: [""],
       data_aquisicao: ["", Validators.required],
       motivo_danificado: [""],
-      situacao_id: [""],
+      situation_id: [""],
       modelo_id: [""],
     });
   }
@@ -129,7 +129,7 @@ export class GerenciarCelularComponent implements OnInit {
       estragado: form.estragado,
       data_aquisicao: form.data_aquisicao,
       motivo_danificado: form.motivo_danificado,
-      situacao_id: form.situacao_id,
+      situacao_id: form.situation_id,
       modelo_id: form.modelo_id.id
     });
   }

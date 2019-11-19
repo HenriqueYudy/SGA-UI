@@ -24,8 +24,10 @@ export const ROUTES: RouteInfo[] = [
     { path: '/gerenciar-celular' , title: 'Gerenciar Celular' , icon : '' , class: 'hidden-route'}, 
     { path: '/gerenciar-modelos' , title: 'Gerenciar Modelos' , icon : '' , class: 'hidden-route'}, 
     { path: '/gerenciar-marcas' , title: 'Gerenciar Marcas' , icon : '' , class: 'hidden-route'}, 
-    { path: '/mobile-manager' , title: 'Mobile Manager', icon: '' , class: 'hidden-route'}
-
+    { path: '/mobile-manager' , title: 'Mobile Manager', icon: '' , class: 'hidden-route'},
+    { path: '/historico-de-uso', title: 'Historico de uso' , icon: '' , class: 'hidden-route'},
+    { path: '/gerenciar-equipamento' , title: 'Gerenciar Equipamentos' , icon: '' , class: 'hidden-route'},
+    { path: '/gerenciar-alocacao-equipamento' , title: 'Gerenciar Alocação de equipamento', icon: '' , class: 'hidden-route'}
   ];
 
 @Component({

@@ -95,6 +95,7 @@
 
         </table>
         <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+       
         <div class="col-12">
           <div class="modal fade" id="newCelularModal" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
             aria-hidden="true">
@@ -141,7 +142,7 @@
 
                       <div class="col-3">
                         <label for="situacaoInput">Situação: </label>
-                        <select class="form-control" formControlName="situacao_id" [(ngModel)]="celular.situacao_id"
+                        <select class="form-control" formControlName="situation_id" [(ngModel)]="celular.situation_id"
                           id="situacaoInput">
                           <option selected>Selecione uma situação...</option>
                           <option *ngFor="let situacao of situacoes" value="{{situacao.id}}">{{situacao.descricao}}

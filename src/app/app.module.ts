@@ -30,7 +30,7 @@ export var options: Partial<IConfig> | (() => Partial<IConfig>);
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot(options)
   ],
-  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent ],
+  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

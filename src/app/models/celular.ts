@@ -1,5 +1,6 @@
-import { Modelo } from './Modelo';
+import { Modelo } from "./Modelo";
 import { Situacao } from "./Situacao";
+import { Marca } from "./Marca";
 
 export class Celular {
   id: number;
@@ -14,6 +15,7 @@ export class Celular {
   estragado: boolean;
   data_aquisicao: Date;
   motivo_danificado: string;
-  situacao_id: Situacao = new Situacao();
+  situation_id: Situacao = new Situacao();
   modelo_id: Modelo = new Modelo();
+  modelo: Modelo
 }

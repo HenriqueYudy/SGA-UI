@@ -15,6 +15,10 @@ export class MobileEmailService {
     return this.http.get<MobileEmail[]>(this.URI);
   }
 
+  indexByMobileEmail(): Observable<MobileEmail[]>{
+    return this.http.get<MobileEmail[]>(this.URI + '/find/indexByEmailDisponivel');
+  }
+
   show(mobileEmail: MobileEmail): Observable<MobileEmail> {
     return this.http.get<MobileEmail>(this.URI + `/${mobileEmail.id}`);
   }

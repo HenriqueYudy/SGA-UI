@@ -13,7 +13,11 @@ export class ChipService {
 
     index(): Observable<Chip[]>{
         return this.http.get<Chip[]>(this.URI);
-    } 
+    }
+    
+    indexByDisponivel(): Observable<Chip[]>{
+        return this.http.get<Chip[]>(this.URI + '/find/indexByDisponivel');
+    }
 
     show(chip: Chip): Observable<Chip>{
         return this.http.get<Chip>(this.URI + `/${chip.id}`);

@@ -1,3 +1,4 @@
+import { EquipamentoService } from './../../services/equipamento.service';
 import { EmpresaService } from './../../services/empresa.service';
 import { MarcaService } from './../../services/marca.service';
 import { PatrimoniosRoutes } from './patrimonios.routing';
@@ -16,6 +17,12 @@ import { ModeloService } from 'src/app/services/modelo.service';
 import { SituacaoService } from 'src/app/services/situacao.service';
 import { CelularService } from 'src/app/services/celular.service';
 import { GerenciadorAlocaoMobileComponent } from './gerenciador-alocao-mobile/gerenciador-alocao-mobile.component';
+import { MatStepperModule, MatHorizontalStepper, MatStepperNext } from '@angular/material/stepper';
+import { MaterialModule } from 'src/app/angularMaterial/angular-material.module';
+import { ColabCelularService } from 'src/app/services/colaboradorCelular.service';
+import { HistoricoCelularComponent } from './historico-celular/historico-celular.component';
+import { GerenciarEquipamentoComponent } from './gerenciar-equipamento/gerenciar-equipamento.component';
+import { AlocarEquipamentoPageComponent } from './alocar-equipamento-page/alocar-equipamento-page.component';
 
 @NgModule({
     imports: [
@@ -36,7 +43,9 @@ import { GerenciadorAlocaoMobileComponent } from './gerenciador-alocao-mobile/ge
         NgxMaskModule,
         ColorPickerModule,
         MatCheckboxModule,
-        FormsModule
+        FormsModule,
+        MatStepperModule,
+        MaterialModule
     ],
     declarations: [
         PatrimoniosComponent,
@@ -44,13 +53,20 @@ import { GerenciadorAlocaoMobileComponent } from './gerenciador-alocao-mobile/ge
         GerenciarMarcasComponent,
         GerenciarCelularComponent,
         GerenciadorAlocaoMobileComponent,
+        HistoricoCelularComponent,
+        GerenciarEquipamentoComponent,
+        AlocarEquipamentoPageComponent
+    
     ],
     providers: [
         ModeloService,
         MarcaService,
         SituacaoService,
         CelularService,
-        EmpresaService
+        EmpresaService,
+        ColabCelularService,
+        EquipamentoService
+        
     ]
 })
 

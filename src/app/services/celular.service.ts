@@ -14,6 +14,10 @@ export class CelularService {
     return this.http.get<Celular[]>(this.URI);
   }
 
+  indexByDisponibility(): Observable<Celular[]>{
+    return this.http.get<Celular[]>(this.URI + '/find/disponivel')
+  }
+
   show(celular: Celular): Observable<Celular> {
     return this.http.get<Celular>(this.URI);
   }

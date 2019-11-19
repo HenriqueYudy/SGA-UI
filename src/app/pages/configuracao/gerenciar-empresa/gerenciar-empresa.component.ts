@@ -20,7 +20,7 @@ export class GerenciarEmpresaComponent implements OnInit {
   empresa: Empresa = new Empresa();
   empresaForm: FormGroup;
 
-  displayedColumns: string [] = ['nome_fantasia' , 'editar', 'deletar'];
+  displayedColumns: string [] = ['nome_fantasia' ,  'cidade' , 'editar', 'deletar'];
   dataSource = new MatTableDataSource<Empresa>(this.empresas);
   @ViewChild(MatPaginator) paginator : MatPaginator;
   @ViewChild(MatSort) sort : MatSort;
@@ -34,7 +34,8 @@ export class GerenciarEmpresaComponent implements OnInit {
     ) {
       this.empresaForm = formBuilder.group({
         id: [''],
-        nome_fantasia: ['', Validators.required]
+        nome_fantasia: ['', Validators.required],
+        cidade: ['', Validators.required]
       });
      }
 

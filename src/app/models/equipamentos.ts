@@ -1,6 +1,10 @@
+import { Modelo } from './Modelo';
+
 export class Equipamentos {
     id: number;
-    modelo: string;
-    marca: string;
-    data_aquisicao: Date;
+    nome: string;
+    modelo_id: Modelo = new Modelo();
+    data_aquisicao: Date = new Date();
+    alocado: boolean;
+    configuracao: string;
 }
