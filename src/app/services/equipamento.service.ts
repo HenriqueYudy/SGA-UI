@@ -15,6 +15,10 @@ export class EquipamentoService {
         return this.http.get<Equipamentos[]>(this.URI);
     }
 
+    indexAvaiableEquipament(): Observable<Equipamentos[]>{
+        return this.http.get<Equipamentos[]>(this.URI + '/find/indexEquipamentAvaiable')
+    }
+
     show(equipamentos: Equipamentos): Observable<Equipamentos>{
         return this.http.get<Equipamentos>(this.URI + `/${equipamentos.id}`);
     }
@@ -22,7 +26,7 @@ export class EquipamentoService {
     store(equipamentos: Equipamentos){
         return this.http.post(this.URI, equipamentos);
     }
-
+    
     update(equipamentos: Equipamentos){
         return this.http.put(this.URI + `/${equipamentos.id}` , equipamentos);
     }

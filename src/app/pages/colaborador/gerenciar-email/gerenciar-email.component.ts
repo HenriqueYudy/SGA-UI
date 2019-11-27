@@ -31,7 +31,7 @@ export class GerenciarEmailComponent implements OnInit {
     this.emailForm = formBuilder.group({
       id: [""],
       endereco: ["", [Validators.required , Validators.email]],
-      em_uso: [false]
+      em_uso: []
     });
   }
 
@@ -69,6 +69,8 @@ export class GerenciarEmailComponent implements OnInit {
   save() {
     var result,
       emailFormValue = this.emailForm.value;
+
+      emailFormValue.em_uso = false;
 
     if (emailFormValue.id) {
       result = this.emailService.update(emailFormValue).subscribe(

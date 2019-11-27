@@ -1,3 +1,4 @@
+import { ColabEquipamentoService } from './../../services/colaboradorEquipamento.service';
 import { EquipamentoService } from './../../services/equipamento.service';
 import { EmpresaService } from './../../services/empresa.service';
 import { MarcaService } from './../../services/marca.service';
@@ -45,7 +46,7 @@ import { AlocarEquipamentoPageComponent } from './alocar-equipamento-page/alocar
         MatCheckboxModule,
         FormsModule,
         MatStepperModule,
-        MaterialModule
+        MaterialModule,
     ],
     declarations: [
         PatrimoniosComponent,
@@ -65,7 +66,8 @@ import { AlocarEquipamentoPageComponent } from './alocar-equipamento-page/alocar
         CelularService,
         EmpresaService,
         ColabCelularService,
-        EquipamentoService
+        EquipamentoService,
+        ColabEquipamentoService
         
     ]
 })

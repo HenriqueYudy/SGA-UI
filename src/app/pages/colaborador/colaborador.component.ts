@@ -34,6 +34,10 @@ export class ColaboradorComponent implements OnInit {
   labelPosition = 'after';
   checked = false;
 
+  // Counts
+  countAllColaborators: number = 0;
+  countActiveColaborators: number = 0;
+
   displayedColumns: String[] = [
     "nome",
     "email",
@@ -90,6 +94,7 @@ export class ColaboradorComponent implements OnInit {
 
     this.colaboradorService.index().subscribe(colaboradores =>{
       this.dataSource.data = colaboradores;
+      this.countAllColaborators = colaboradores.length
     });
 
     this.cargoService.index().subscribe(cargos =>{
@@ -98,7 +103,7 @@ export class ColaboradorComponent implements OnInit {
     this.empresaService.index().subscribe(empresas => {
       this.empresas = empresas;
     });
-    this.emailService.index().subscribe(emails => {
+    this.emailService.indexByAvaiableEmail().subscribe(emails => {
       this.emails = emails;
     });
     this.setorService.index().subscribe(setor => {

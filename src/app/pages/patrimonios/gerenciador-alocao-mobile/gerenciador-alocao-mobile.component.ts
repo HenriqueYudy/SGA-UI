@@ -192,6 +192,7 @@ export class GerenciadorAlocaoMobileComponent implements OnInit {
     this.colabCelularService.indexByColaborator(colaborador).subscribe(resp => {
       this.celularesComodatados = resp;
     });
+    
   }
 
   filterTable(filterValue: string) {

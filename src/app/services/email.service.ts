@@ -14,6 +14,10 @@ export class EmailService {
     return this.http.get<Email[]>(this.URI);
   }
 
+  indexByAvaiableEmail(): Observable<Email[]>{
+    return this.http.get<Email[]>(this.URI + '/find/avaiablesEmails');
+  }
+
   show(email: Email): Observable<Email> {
     return this.http.get<Email>(this.URI + `/${email.id}`);
   }
